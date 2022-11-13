@@ -1,0 +1,114 @@
+= Steel Project Management
+:imagesdir: ./images
+:stem: latexmath
+
+Project management is the nervous system of an engineering organization. It
+lies between the executive system and 
+Competent project management interfaces the high level instructions from the 
+brain, the executive team, to the details of the body. strong engineering organization has two legs: engineering and project
+management. The balance and collaboration of the legs is vital for moving the
+organization in the proper direction. In balances lead to awkward movement
+which wastes resources and looses races.
+
+
+The iron triangle of project management is a model for understanding the
+trade-offs and constraints which can be applied. It states that a project's
+quality is governed by 3 constraints: scope (features), monetary cost, and
+schedule. 
+
+Business constraints play a large role, however indirect, in all engineering
+teams. Generally, all engineering activities serve a larger business goal, but
+often goals conflict
+that are provided by the customers and business which
+govern project management. The relationships between the controllable factors
+is often complex in detail, but 
+
+
+Any strong engineering company has a healthy balance between raw engineering
+talent and project management. TenResponsible for delivering embedded software, your team like all others
+is subject to the **insert link to ref below**[Iron Triangle of Project 
+Management]. The principle was originally defined to state that a project's 
+quality is governed by 3 constraints: scope, cost, and time, but because the 
+figure is a triangle, quality, the 4th factor, is often forgotten. Instead, a 
+project should be viewed as an equation which governs the relationships between 
+4 factors. In this representation, it is clear that changes to one factor 
+will propagate to the other factors. Factors can be prioritized by being held
+constant (ie made a constraint), but not all factors can be held constant. The
+error in project planning must be able to manifest itself in one of the 
+factors. For example, if a piece of software with these specific features, 
+**scope**, must be deliverable on September 15th, **date**, and your team has 
+3 full-time developers, **cost**, then the software's quality will be 
+determined by the degree of error in project management. How accurate was
+project management at predicting the relationships of these factors? 
+
+NOTE: Its important to understand that this model is an imperfect
+simplification. For example, a project 
+
+Although embedded software teams should work closely with project management to
+decide how the factors should be prioritized and changed, a team working in a
+strictly software-producing capacity is really only in control of quality and
+cost. The interplay between these factors is based on how a team spends its
+time. 
+
+As an embedded software team, working in
+a striclty software devleopment capacity meaning you are not advising project
+managment how it can manipulate the constraints.
+
+image::iron-triangle.png[200,200]
+
+== Flaws of the Iron Triangle
+* A special case can occur when adding indirect scope (ie tooling, automation, 
+  process standardization, process execution, meetings, etc.) Even though scope
+  increases, quality increases and cost and time decreases all simultaneously.
+  This violates the central principle of the iron triangle: "Quality, scope, 
+  cost, and time. Choose 3."
+** REBUTTAL: perhaps some indirect scope actually decreases the total scope.
+
+
+== Steel Project Management
+A project management model based on the principles of the iron triangle with an
+extended granularity derived from first principles.
+
+=== Equations
+https://www.investopedia.com/terms/r/real-value.asp[real value vs perceived
+value]
+
+++++
+total_profit(product) = revenue(product, quantity, demand ...) - 
+                        cost_production(product, quantity, ...) -
+                        cost_development(time~elapsed, ...)
+++++
+NOTE: Business' operational expenses are explicitly not included because
+they vary greatly depending on the organization. For example, the total profit
+of a single product company must be large enough to bankroll HR, management,
+customer service, etc., but at a multi-product company, the relationship is
+less clear.
+
+++++
+revenue(product, quantity, ...) = perceived_value(product, ...) * quantity
+
+perceived_value(product, ...) = perception_scalar(scarcity, marketing, novelty,
+                                                  brand, ...) *
+                                real_value(product)
+
+real_value(product, quantity) = (cost_production(product, quantity, ...) +
+                                cost_development(time_elapsed, ...)) /
+                                quantity
+
+cost_development(time_elapsed, ...) = cost_labor(time_elapsed, people, ...) +
+                                      cost_tools(...) + 
+                                      cost_development_materials(...)
+
+cost_labor_effective(time_elapsed, people, ...) = 
+    organizational_efficiency * \sum^{last team}_{t = first team} 
+    team_efficiency * \sum^{last member}_{first member} 
+    individual_efficiency(individual, experience, time_elapsed, ...) *
+    individual_cost_time_rate(individual, experience, ...) * 
+    time_elapsed
+
+
+++++
+
+=== Brainstorming
+"And can scale up without significant changes to tooling, architecture, or
+development practices." -- goal of the twelve factor app
